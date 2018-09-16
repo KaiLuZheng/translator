@@ -22,14 +22,15 @@ except Exception as e:
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+chrome_options = Options()
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
+
 try :
-    chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--disable-gpu')
     opener = webdriver.Chrome(chrome_options = chrome_options)
-except Exception as e:
-    print(e)
-finally:
     opener.close()
     opener.quit()
-    
+except Exception as e:
+    print(e)
+    if re.search(r'cannot find Chrome binary', str(e)) is not None:
+        print('you may install the chrome for your computer')
