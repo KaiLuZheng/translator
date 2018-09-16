@@ -33,4 +33,5 @@ try :
 except Exception as e:
     print(e)
     if re.search(r'cannot find Chrome binary', str(e)) is not None:
-        print('you may install the chrome for your computer')
+        print('you may install the chrome for your computer.')
+        print('or you may prefer to the chromium, it is ok.')
