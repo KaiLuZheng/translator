@@ -23,6 +23,10 @@ chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
 
+# failed on centos , so add this
+chrome_options.add_argument("window-size=1024,768")
+chrome_options.add_argument("--no-sandbox")
+
 # not api , because the params can not be gained easily
 
 translator_baidu_urlhost = 'https://fanyi.baidu.com/?aldtype=85#en/zh/'
