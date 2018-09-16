@@ -18,4 +18,5 @@ req = urllib.request.Request(url, data)
 res = urllib.request.urlopen(req)
 
 sjson = json.loads(res.read().decode('utf8'))
+
 print(sjson)
