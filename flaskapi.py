@@ -7,7 +7,7 @@ from translate import baiduTranslator as btt
 
 app = Flask(__name__) # create a server 
 
-@app.route('/get_user',methods=['post']) 
+@app.route('/api/translate',methods=['post']) 
 #@app.route('/api/translate',methods=['get']) 
 def get_user():
     postdata = request.form.get('word')
