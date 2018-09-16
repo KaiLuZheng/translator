@@ -14,7 +14,13 @@ def get_user():
     #data  = btt().translateWord('fuck')
     data  = btt().translateWord(postdata)
 
-    return jsonify(data)   # pac as a json
+    return jsonify(data)   # pack as a json
+
+@app.route('/',methods=['get']) 
+def index():
+    with open('./htmls/index.html', 'r') as f:
+        return f.read()  
+
 
 conf = configparser.ConfigParser()
 conf.read('conf.ini')
