@@ -25,6 +25,8 @@ from selenium.webdriver.chrome.options import Options
 chrome_options = Options()
 chrome_options.add_argument('--headless')
 chrome_options.add_argument('--disable-gpu')
+chrome_options.add_argument("window-size=1024,768")
+chrome_options.add_argument("--no-sandbox")
 
 try :
     opener = webdriver.Chrome(chrome_options = chrome_options)
