@@ -36,7 +36,9 @@
 
 需要 chromedriver 启动器
     
-    注意， chromedriver 的版本，需要和 Selenium chrome 对应
+    注意， chromedriver 的版本，需要和 chrome 对应
+    
+    可以将 charmedriver 复制到 /usr/bin 中
     
     
     
