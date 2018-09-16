@@ -16,6 +16,6 @@ except Exception as e:
     print(e)
 
     if re.search(r'No module', str(e)) is not None:
-        print('you may try: pip install %s'%(re.search(r'\'(.*?)\'').group(1))) 
+        print('you may try: pip install %s'%(re.search(r'\'(.*?)\'', str(e)).group(1))) 
 
 
